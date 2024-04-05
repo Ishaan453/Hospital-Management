@@ -2,40 +2,47 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 import java.sql.*;
-
 /**
  *
  * @author ishaa
  */
-public class PatientMenu extends javax.swing.JFrame {
-    int PatientID;
+public class AppointmentBooked extends javax.swing.JFrame {
+    int patientid;
+    int doctorid;
+    String Reason;
+    String Date;
+    String Mobile;
+    
     /**
-     * Creates new form PatientMenu
+     * Creates new form AppointmentBooked
      */
-    public PatientMenu(int pid) {
+    public AppointmentBooked(int pid, int did, String re, String date, String mb) {
         initComponents();
-        PatientID = pid;
+        patientid = pid;
+        doctorid = did;
+        Reason = re;
+        Date = date;
+        Mobile = mb;
+        
         try{
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital_Management", "root", "!shuB0410");
             Statement s = con.createStatement();
-            String name = "";
-            ResultSet rs = s.executeQuery("SELECT name FROM Patients WHERE Patient_ID=" + pid);
-            if (rs.next()) {
-                name = rs.getString("name");
-            }
-            else{
-                System.out.println("Error while retrieving data");
+            String DoctorName = "";
+            ResultSet rs = s.executeQuery("SELECT name FROM Staff WHERE Staff_ID=" + doctorid);
+            if(rs.next()){
+                DoctorName = rs.getString("Name");
             }
             
-            DisName.setText("Hello, " + name);
-            DisPID.setText("PatientID: " + PatientID);
-            
-        }   
+            details.setText("<html>Patient ID: " + patientid + "<br>"
+                        + "Doctor Name: " + DoctorName + "<br>"
+                        + "Reason for Visit: " + Reason + "<br>"
+                        + "Date: " + Date + "</html>");
+        }
         catch(Exception e){
             System.out.println(e.toString());
         }
+        
     }
 
     /**
@@ -47,20 +54,19 @@ public class PatientMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        DisName = new javax.swing.JLabel();
-        DisPID = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        details = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        DisName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        DisName.setText("Hello, Name");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("Appointment Booked");
 
-        DisPID.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        DisPID.setText("PatientID: ");
+        details.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        details.setText("jLabel2");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Book an Appointment");
+        jButton1.setText("Return To Menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -71,27 +77,24 @@ public class PatientMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(DisName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(DisPID)
-                .addGap(40, 40, 40))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(115, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(details, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DisName)
-                    .addComponent(DisPID))
-                .addGap(31, 31, 31)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addGap(27, 27, 27)
+                .addComponent(details, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -99,10 +102,9 @@ public class PatientMenu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        AppointmentBooking apb = new AppointmentBooking(PatientID);
-        apb.setVisible(true);
+        PatientMenu pm = new PatientMenu(patientid);
+        pm.setVisible(true);
         this.setVisible(false);
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -122,27 +124,27 @@ public class PatientMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PatientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppointmentBooked.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PatientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppointmentBooked.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PatientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppointmentBooked.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PatientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppointmentBooked.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new PatientMenu().setVisible(true);
+                //new AppointmentBooked().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel DisName;
-    private javax.swing.JLabel DisPID;
+    private javax.swing.JLabel details;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
