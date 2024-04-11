@@ -79,37 +79,37 @@ public class PatientPrescription extends javax.swing.JFrame {
         jLabel2.setText("Prescription ID: ");
 
         prescriptionID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        prescriptionID.setText("jLabel3");
+        prescriptionID.setText("No Data Found");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Patient Name: ");
 
         Pname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Pname.setText("jLabel4");
+        Pname.setText("No Data Found");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Doctor Name: ");
 
         Dname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Dname.setText("jLabel5");
+        Dname.setText("No Data Found");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Reason For Visit: ");
 
         ReasonVisit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ReasonVisit.setText("jLabel6");
+        ReasonVisit.setText("No Data Found");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setText("Diseases Found: ");
 
         DiseasesFound.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        DiseasesFound.setText("jLabel8");
+        DiseasesFound.setText("No Data Found");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Medication: ");
 
         Medication.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Medication.setText("jLabel8");
+        Medication.setText("No Data Found");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Return to Menu");
@@ -169,7 +169,7 @@ public class PatientPrescription extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(prescriptionID))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(Pname))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
