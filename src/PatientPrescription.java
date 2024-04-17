@@ -27,7 +27,7 @@ public class PatientPrescription extends javax.swing.JFrame {
                            JOIN Prescription_Diseases ON Prescriptions.Prescription_ID = Prescription_Diseases.Prescription_ID 
                            JOIN Diseases ON Prescription_Diseases.Disease_id = Diseases.Disease_ID 
                            JOIN Staff ON Staff.Staff_ID = Appointments.Doctor_ID 
-                           WHERE Prescriptions.Patient_ID = """ + PatientID + " \n" +
+                           WHERE Prescriptions.Patient_ID = """ + PatientID + " and Appointments.Appointment_ID=Prescriptions.Appointment_ID \n" +
                             "ORDER BY Prescriptions.date DESC \n" +
                             "LIMIT 1;");
             if(rs.next()){
