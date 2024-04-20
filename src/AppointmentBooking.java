@@ -49,45 +49,74 @@ public class AppointmentBooking extends javax.swing.JFrame {
         error = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         mobile = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(782, 320));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Book an Appointment");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(250, 10, 210, 25);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Choose Department");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 50, 150, 20);
 
         DepartmentRadio.add(rdoCardiology);
         rdoCardiology.setText("Cardiology");
+        getContentPane().add(rdoCardiology);
+        rdoCardiology.setBounds(210, 50, 100, 21);
 
         DepartmentRadio.add(rdoOrthopedics);
         rdoOrthopedics.setText("Orthopedics");
+        getContentPane().add(rdoOrthopedics);
+        rdoOrthopedics.setBounds(310, 50, 90, 21);
 
         DepartmentRadio.add(rdoPediatrics);
         rdoPediatrics.setText("Pediatrics");
+        getContentPane().add(rdoPediatrics);
+        rdoPediatrics.setBounds(410, 50, 90, 21);
 
         DepartmentRadio.add(rdoNeurology);
         rdoNeurology.setText("Neurology");
+        getContentPane().add(rdoNeurology);
+        rdoNeurology.setBounds(510, 50, 90, 21);
 
         DepartmentRadio.add(rdoOncology);
         rdoOncology.setText("Oncology");
+        getContentPane().add(rdoOncology);
+        rdoOncology.setBounds(600, 50, 100, 21);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Reason For Visit");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, 100, 170, 20);
 
         reasonVisit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        getContentPane().add(reasonVisit);
+        reasonVisit.setBounds(210, 100, 260, 26);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("When");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 150, 130, 20);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(240, 150, 30, 0);
 
         when.add(tomm);
         tomm.setText("Tomorrow");
+        getContentPane().add(tomm);
+        tomm.setBounds(210, 150, 100, 21);
 
         when.add(dayAfterTomm);
         dayAfterTomm.setText("Day-After Tomorrow");
+        getContentPane().add(dayAfterTomm);
+        dayAfterTomm.setBounds(310, 150, 160, 21);
 
         book_app.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         book_app.setText("Book");
@@ -96,97 +125,31 @@ public class AppointmentBooking extends javax.swing.JFrame {
                 book_appActionPerformed(evt);
             }
         });
+        getContentPane().add(book_app);
+        book_app.setBounds(210, 230, 260, 32);
 
         error.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         error.setForeground(new java.awt.Color(255, 0, 51));
         error.setText("   ");
+        getContentPane().add(error);
+        error.setBounds(210, 210, 690, 20);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Mobile Number");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(10, 180, 160, 20);
 
         mobile.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        getContentPane().add(mobile);
+        mobile.setBounds(210, 180, 260, 26);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(262, 262, 262))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(123, 123, 123)
-                                    .addComponent(jLabel5))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(97, 97, 97)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(mobile)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(tomm)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(dayAfterTomm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addComponent(book_app, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3))
-                            .addGap(72, 72, 72)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(rdoCardiology)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(rdoOrthopedics)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(rdoPediatrics)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(rdoNeurology)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(rdoOncology))
-                                .addComponent(reasonVisit)))))
-                .addGap(0, 20, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(rdoCardiology)
-                    .addComponent(rdoOrthopedics)
-                    .addComponent(rdoPediatrics)
-                    .addComponent(rdoNeurology)
-                    .addComponent(rdoOncology))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(reasonVisit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(tomm)
-                    .addComponent(dayAfterTomm))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(mobile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(book_app)
-                .addGap(18, 18, 18)
-                .addComponent(error)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OIP (2).jpg"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        jLabel7.setMaximumSize(new java.awt.Dimension(1041, 650));
+        jLabel7.setMinimumSize(new java.awt.Dimension(1041, 650));
+        jLabel7.setPreferredSize(new java.awt.Dimension(1041, 650));
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(-90, 0, 890, 310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -314,6 +277,7 @@ public class AppointmentBooking extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField mobile;
     private javax.swing.JRadioButton rdoCardiology;
     private javax.swing.JRadioButton rdoNeurology;

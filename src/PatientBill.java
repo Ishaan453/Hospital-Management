@@ -56,35 +56,56 @@ public class PatientBill extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         bill = new javax.swing.JLabel();
         return_btn = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(398, 300));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Online Bill Detail");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(120, 20, 160, 25);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Patient ID");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(70, 60, 80, 20);
 
         pid.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         pid.setText("No Data Found");
+        getContentPane().add(pid);
+        pid.setBounds(180, 60, 160, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Patient Name");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(70, 90, 100, 20);
 
         Pname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Pname.setText("No Data Found");
+        getContentPane().add(Pname);
+        Pname.setBounds(180, 90, 280, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Doctor Name");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(70, 110, 100, 20);
 
         Dname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Dname.setText("No Data Found");
+        getContentPane().add(Dname);
+        Dname.setBounds(180, 110, 160, 20);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Total Bill Amount: ");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(70, 170, 130, 20);
 
         bill.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         bill.setText("No Data Found");
+        getContentPane().add(bill);
+        bill.setBounds(200, 170, 140, 20);
 
         return_btn.setText("Return to Menu");
         return_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -92,62 +113,13 @@ public class PatientBill extends javax.swing.JFrame {
                 return_btnActionPerformed(evt);
             }
         });
+        getContentPane().add(return_btn);
+        return_btn.setBounds(130, 230, 150, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4))
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(pid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Dname, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(122, 122, 122))
-                            .addComponent(Pname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(bill))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(return_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(pid))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(Pname))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(Dname))
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(bill))
-                .addGap(40, 40, 40)
-                .addComponent(return_btn)
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OIP (2).jpg"))); // NOI18N
+        jLabel6.setText("jLabel6");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(-330, -30, 960, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,6 +175,7 @@ public class PatientBill extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel pid;
     private javax.swing.JButton return_btn;
     // End of variables declaration//GEN-END:variables

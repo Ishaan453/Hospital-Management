@@ -57,14 +57,21 @@ public class AppointmentBooked extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         details = new javax.swing.JLabel();
         return_menu = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(398, 350));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Appointment Booked");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(115, 25, 200, 25);
 
         details.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         details.setText("jLabel2");
+        getContentPane().add(details);
+        details.setBounds(100, 60, 290, 192);
 
         return_menu.setText("Return To Menu");
         return_menu.addActionListener(new java.awt.event.ActionListener() {
@@ -72,30 +79,13 @@ public class AppointmentBooked extends javax.swing.JFrame {
                 return_menuActionPerformed(evt);
             }
         });
+        getContentPane().add(return_menu);
+        return_menu.setBounds(110, 260, 185, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(115, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(details, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(return_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(100, 100, 100))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1)
-                .addGap(27, 27, 27)
-                .addComponent(details, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(return_menu)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OIP (2).jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-20, -30, 470, 440);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -145,6 +135,7 @@ public class AppointmentBooked extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel details;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton return_menu;
     // End of variables declaration//GEN-END:variables
 }

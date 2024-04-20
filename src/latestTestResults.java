@@ -66,22 +66,35 @@ public class latestTestResults extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         result = new javax.swing.JLabel();
         return_btn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(500, 200));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Test Results");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(202, 14, 102, 25);
 
         Pname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Pname.setText("Patient Name: ");
+        getContentPane().add(Pname);
+        Pname.setBounds(18, 57, 220, 20);
 
         Dname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Dname.setText("Doctor Name: ");
+        getContentPane().add(Dname);
+        Dname.setBounds(267, 57, 190, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Result:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(60, 95, 50, 20);
 
         result.setText("jLabel5");
+        getContentPane().add(result);
+        result.setBounds(119, 98, 335, 16);
 
         return_btn.setText("Return to Menu");
         return_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -89,50 +102,13 @@ public class latestTestResults extends javax.swing.JFrame {
                 return_btnActionPerformed(evt);
             }
         });
+        getContentPane().add(return_btn);
+        return_btn.setBounds(189, 127, 113, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(194, 194, 194))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Pname)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Dname))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(result, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(44, 44, 44))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addComponent(return_btn)
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Pname)
-                    .addComponent(Dname))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(result))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(return_btn)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OIP (2).jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-10, -10, 780, 200);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -183,6 +159,7 @@ public class latestTestResults extends javax.swing.JFrame {
     private javax.swing.JLabel Dname;
     private javax.swing.JLabel Pname;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel result;
     private javax.swing.JButton return_btn;

@@ -57,14 +57,21 @@ public class PatientMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         unreg = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(550, 420));
+        getContentPane().setLayout(null);
 
         DisName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         DisName.setText("Hello, Name");
+        getContentPane().add(DisName);
+        DisName.setBounds(29, 52, 280, 25);
 
         DisPID.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         DisPID.setText("PatientID: ");
+        getContentPane().add(DisPID);
+        DisPID.setBounds(356, 52, 180, 25);
 
         appointment_book.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         appointment_book.setText("Book an Appointment");
@@ -73,6 +80,8 @@ public class PatientMenu extends javax.swing.JFrame {
                 appointment_bookActionPerformed(evt);
             }
         });
+        getContentPane().add(appointment_book);
+        appointment_book.setBounds(139, 108, 270, 27);
 
         result_check.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         result_check.setText("Check Latest Test Results");
@@ -81,6 +90,8 @@ public class PatientMenu extends javax.swing.JFrame {
                 result_checkActionPerformed(evt);
             }
         });
+        getContentPane().add(result_check);
+        result_check.setBounds(139, 147, 270, 27);
 
         prescription_check.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         prescription_check.setText("Latest Prescription");
@@ -89,6 +100,8 @@ public class PatientMenu extends javax.swing.JFrame {
                 prescription_checkActionPerformed(evt);
             }
         });
+        getContentPane().add(prescription_check);
+        prescription_check.setBounds(139, 186, 270, 27);
 
         bill_check.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         bill_check.setText("Check Latest Bill");
@@ -97,6 +110,8 @@ public class PatientMenu extends javax.swing.JFrame {
                 bill_checkActionPerformed(evt);
             }
         });
+        getContentPane().add(bill_check);
+        bill_check.setBounds(139, 225, 270, 27);
 
         allergy_view.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         allergy_view.setText("View or Update Allergies");
@@ -105,9 +120,13 @@ public class PatientMenu extends javax.swing.JFrame {
                 allergy_viewActionPerformed(evt);
             }
         });
+        getContentPane().add(allergy_view);
+        allergy_view.setBounds(139, 264, 270, 27);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("APOLLO HOSPITALS PVT. LTD.");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(103, 14, 341, 32);
 
         unreg.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         unreg.setText("UnRegister as Patient");
@@ -116,6 +135,8 @@ public class PatientMenu extends javax.swing.JFrame {
                 unregActionPerformed(evt);
             }
         });
+        getContentPane().add(unreg);
+        unreg.setBounds(139, 303, 270, 27);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Log Out");
@@ -124,60 +145,14 @@ public class PatientMenu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(139, 342, 270, 27);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(DisName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DisPID)
-                        .addGap(59, 59, 59))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(appointment_book, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(result_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(prescription_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bill_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(allergy_view, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
-                            .addComponent(unreg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(jLabel1)
-                .addGap(0, 102, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DisName)
-                    .addComponent(DisPID))
-                .addGap(31, 31, 31)
-                .addComponent(appointment_book, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(result_check)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(prescription_check)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bill_check)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(allergy_view)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(unreg)
-                .addGap(12, 12, 12)
-                .addComponent(jButton1)
-                .addGap(14, 14, 14))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/istockphoto-940993008-612x612.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jLabel2.setMinimumSize(new java.awt.Dimension(550, 390));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, -10, 590, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -275,6 +250,7 @@ public class PatientMenu extends javax.swing.JFrame {
     private javax.swing.JButton bill_check;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton prescription_check;
     private javax.swing.JButton result_check;
     private javax.swing.JButton unreg;

@@ -62,11 +62,16 @@ public class PatientAllergies extends javax.swing.JFrame {
         Pname = new javax.swing.JLabel();
         return_btn = new javax.swing.JButton();
         error = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(400, 415));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("View or Update Allergies");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(89, 6, 240, 25);
 
         AllergyDis.setEditable(false);
         AllergyDis.setColumns(20);
@@ -75,7 +80,12 @@ public class PatientAllergies extends javax.swing.JFrame {
         AllergyDis.setText("Hello\nworld");
         jScrollPane1.setViewportView(AllergyDis);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(72, 72, 254, 146);
+
         allergyText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        getContentPane().add(allergyText);
+        allergyText.setBounds(72, 242, 254, 26);
 
         add_btn.setText("Add Allergy");
         add_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +93,8 @@ public class PatientAllergies extends javax.swing.JFrame {
                 add_btnActionPerformed(evt);
             }
         });
+        getContentPane().add(add_btn);
+        add_btn.setBounds(72, 286, 110, 23);
 
         rem_btn.setText("Remove Allergy");
         rem_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -90,12 +102,18 @@ public class PatientAllergies extends javax.swing.JFrame {
                 rem_btnActionPerformed(evt);
             }
         });
+        getContentPane().add(rem_btn);
+        rem_btn.setBounds(206, 286, 120, 23);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Patient Name:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(72, 40, 90, 20);
 
         Pname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Pname.setText("jLabel3");
+        getContentPane().add(Pname);
+        Pname.setBounds(178, 40, 148, 20);
 
         return_btn.setText("Return to Menu");
         return_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -103,62 +121,18 @@ public class PatientAllergies extends javax.swing.JFrame {
                 return_btnActionPerformed(evt);
             }
         });
+        getContentPane().add(return_btn);
+        return_btn.setBounds(136, 327, 113, 23);
 
         error.setForeground(new java.awt.Color(255, 51, 51));
-        error.setText("jLabel3");
+        error.setText("    ");
+        getContentPane().add(error);
+        error.setBounds(72, 356, 254, 16);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(98, 98, 98))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(return_btn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(Pname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(add_btn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(rem_btn))
-                            .addComponent(allergyText)
-                            .addComponent(jScrollPane1)
-                            .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(74, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(Pname))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(allergyText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rem_btn)
-                    .addComponent(add_btn))
-                .addGap(18, 18, 18)
-                .addComponent(return_btn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(error)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OIP (2).jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(-40, -10, 860, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -258,6 +232,7 @@ public class PatientAllergies extends javax.swing.JFrame {
     private javax.swing.JLabel error;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton rem_btn;
     private javax.swing.JButton return_btn;

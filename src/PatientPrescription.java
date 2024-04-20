@@ -69,47 +69,76 @@ public class PatientPrescription extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         Medication = new javax.swing.JLabel();
         return_btn = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(600, 350));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Prescription");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(260, 6, 120, 25);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Prescription ID: ");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(48, 43, 110, 20);
 
         prescriptionID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         prescriptionID.setText("No Data Found");
+        getContentPane().add(prescriptionID);
+        prescriptionID.setBounds(164, 43, 370, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Patient Name: ");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(48, 75, 100, 20);
 
         Pname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Pname.setText("No Data Found");
+        getContentPane().add(Pname);
+        Pname.setBounds(164, 75, 370, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Doctor Name: ");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(48, 107, 100, 20);
 
         Dname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Dname.setText("No Data Found");
+        getContentPane().add(Dname);
+        Dname.setBounds(164, 107, 370, 20);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Reason For Visit: ");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(48, 139, 120, 20);
 
         ReasonVisit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ReasonVisit.setText("No Data Found");
+        getContentPane().add(ReasonVisit);
+        ReasonVisit.setBounds(166, 139, 370, 20);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setText("Diseases Found: ");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(48, 171, 120, 20);
 
         DiseasesFound.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DiseasesFound.setText("No Data Found");
+        getContentPane().add(DiseasesFound);
+        DiseasesFound.setBounds(163, 171, 370, 20);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Medication: ");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(48, 203, 90, 20);
 
         Medication.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Medication.setText("No Data Found");
+        getContentPane().add(Medication);
+        Medication.setBounds(163, 203, 370, 20);
 
         return_btn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         return_btn.setText("Return to Menu");
@@ -118,80 +147,13 @@ public class PatientPrescription extends javax.swing.JFrame {
                 return_btnActionPerformed(evt);
             }
         });
+        getContentPane().add(return_btn);
+        return_btn.setBounds(222, 251, 140, 27);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ReasonVisit, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(prescriptionID, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                            .addComponent(Pname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Dname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DiseasesFound, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Medication, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(73, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(230, 230, 230))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(return_btn)
-                        .addGap(244, 244, 244))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(prescriptionID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(Pname))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(Dname))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(ReasonVisit))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(DiseasesFound))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(Medication))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(return_btn)
-                .addGap(22, 22, 22))
-        );
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/download (1).jpg"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(-90, 0, 700, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -251,6 +213,7 @@ public class PatientPrescription extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel prescriptionID;
     private javax.swing.JButton return_btn;
     // End of variables declaration//GEN-END:variables
