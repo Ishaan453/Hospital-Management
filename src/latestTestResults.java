@@ -65,7 +65,7 @@ public class latestTestResults extends javax.swing.JFrame {
         Dname = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         result = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        return_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,10 +83,10 @@ public class latestTestResults extends javax.swing.JFrame {
 
         result.setText("jLabel5");
 
-        jButton1.setText("Return to Menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        return_btn.setText("Return to Menu");
+        return_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                return_btnActionPerformed(evt);
             }
         });
 
@@ -113,7 +113,7 @@ public class latestTestResults extends javax.swing.JFrame {
                 .addGap(44, 44, 44))
             .addGroup(layout.createSequentialGroup()
                 .addGap(189, 189, 189)
-                .addComponent(jButton1)
+                .addComponent(return_btn)
                 .addContainerGap(196, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -130,19 +130,19 @@ public class latestTestResults extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(result))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(return_btn)
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void return_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_return_btnActionPerformed
         // TODO add your handling code here:
         PatientMenu pm = new PatientMenu(PatientID);
         pm.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_return_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,9 +182,9 @@ public class latestTestResults extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Dname;
     private javax.swing.JLabel Pname;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel result;
+    private javax.swing.JButton return_btn;
     // End of variables declaration//GEN-END:variables
 }

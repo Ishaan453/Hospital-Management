@@ -45,7 +45,7 @@ public class AppointmentBooking extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         tomm = new javax.swing.JRadioButton();
         dayAfterTomm = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        book_app = new javax.swing.JButton();
         error = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         mobile = new javax.swing.JTextField();
@@ -77,7 +77,6 @@ public class AppointmentBooking extends javax.swing.JFrame {
         jLabel3.setText("Reason For Visit");
 
         reasonVisit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        reasonVisit.setText("    ");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("When");
@@ -90,11 +89,11 @@ public class AppointmentBooking extends javax.swing.JFrame {
         when.add(dayAfterTomm);
         dayAfterTomm.setText("Day-After Tomorrow");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Book");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        book_app.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        book_app.setText("Book");
+        book_app.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                book_appActionPerformed(evt);
             }
         });
 
@@ -135,7 +134,7 @@ public class AppointmentBooking extends javax.swing.JFrame {
                                             .addComponent(tomm)
                                             .addGap(18, 18, 18)
                                             .addComponent(dayAfterTomm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                        .addComponent(book_app, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
@@ -183,7 +182,7 @@ public class AppointmentBooking extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(mobile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addComponent(jButton1)
+                .addComponent(book_app)
                 .addGap(18, 18, 18)
                 .addComponent(error)
                 .addContainerGap(10, Short.MAX_VALUE))
@@ -192,7 +191,7 @@ public class AppointmentBooking extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void book_appActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_book_appActionPerformed
         // TODO add your handling code here:
         try{
             int DoctorID;
@@ -267,7 +266,7 @@ public class AppointmentBooking extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.toString());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_book_appActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,9 +305,9 @@ public class AppointmentBooking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup DepartmentRadio;
+    private javax.swing.JButton book_app;
     private javax.swing.JRadioButton dayAfterTomm;
     private javax.swing.JLabel error;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

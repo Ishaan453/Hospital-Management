@@ -56,7 +56,7 @@ public class AppointmentBooked extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         details = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        return_menu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,10 +66,10 @@ public class AppointmentBooked extends javax.swing.JFrame {
         details.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         details.setText("jLabel2");
 
-        jButton1.setText("Return To Menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        return_menu.setText("Return To Menu");
+        return_menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                return_menuActionPerformed(evt);
             }
         });
 
@@ -82,7 +82,7 @@ public class AppointmentBooked extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(details, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(return_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
@@ -93,19 +93,19 @@ public class AppointmentBooked extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(details, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(return_menu)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void return_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_return_menuActionPerformed
         // TODO add your handling code here:
         PatientMenu pm = new PatientMenu(patientid);
         pm.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_return_menuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,7 +144,7 @@ public class AppointmentBooked extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel details;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton return_menu;
     // End of variables declaration//GEN-END:variables
 }

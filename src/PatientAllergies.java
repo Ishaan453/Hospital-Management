@@ -56,11 +56,11 @@ public class PatientAllergies extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         AllergyDis = new javax.swing.JTextArea();
         allergyText = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        add_btn = new javax.swing.JButton();
+        rem_btn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Pname = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        return_btn = new javax.swing.JButton();
         error = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,17 +77,17 @@ public class PatientAllergies extends javax.swing.JFrame {
 
         allergyText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jButton1.setText("Add Allergy");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        add_btn.setText("Add Allergy");
+        add_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                add_btnActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Remove Allergy");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        rem_btn.setText("Remove Allergy");
+        rem_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                rem_btnActionPerformed(evt);
             }
         });
 
@@ -97,10 +97,10 @@ public class PatientAllergies extends javax.swing.JFrame {
         Pname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Pname.setText("jLabel3");
 
-        jButton3.setText("Return to Menu");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        return_btn.setText("Return to Menu");
+        return_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                return_btnActionPerformed(evt);
             }
         });
 
@@ -119,7 +119,7 @@ public class PatientAllergies extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jButton3))
+                        .addComponent(return_btn))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -128,9 +128,9 @@ public class PatientAllergies extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(Pname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(add_btn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2))
+                                .addComponent(rem_btn))
                             .addComponent(allergyText)
                             .addComponent(jScrollPane1)
                             .addComponent(error, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -151,10 +151,10 @@ public class PatientAllergies extends javax.swing.JFrame {
                 .addComponent(allergyText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(rem_btn)
+                    .addComponent(add_btn))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(return_btn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(error)
                 .addContainerGap(14, Short.MAX_VALUE))
@@ -163,7 +163,7 @@ public class PatientAllergies extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void add_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_btnActionPerformed
         // TODO add your handling code here:
         String allergy = allergyText.getText();
         if(allergy.isEmpty()){
@@ -185,9 +185,9 @@ public class PatientAllergies extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.toString());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_add_btnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void rem_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rem_btnActionPerformed
         // TODO add your handling code here:
         String allergy = allergyText.getText();
         if(allergy.isEmpty()){
@@ -206,14 +206,14 @@ public class PatientAllergies extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.toString());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_rem_btnActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void return_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_return_btnActionPerformed
         // TODO add your handling code here:
         PatientMenu pm = new PatientMenu(PatientID);
         pm.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_return_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,13 +253,13 @@ public class PatientAllergies extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea AllergyDis;
     private javax.swing.JLabel Pname;
+    private javax.swing.JButton add_btn;
     private javax.swing.JTextField allergyText;
     private javax.swing.JLabel error;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton rem_btn;
+    private javax.swing.JButton return_btn;
     // End of variables declaration//GEN-END:variables
 }

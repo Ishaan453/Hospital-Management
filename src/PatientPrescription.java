@@ -68,7 +68,7 @@ public class PatientPrescription extends javax.swing.JFrame {
         DiseasesFound = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Medication = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        return_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,11 +111,11 @@ public class PatientPrescription extends javax.swing.JFrame {
         Medication.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Medication.setText("No Data Found");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Return to Menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        return_btn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        return_btn.setText("Return to Menu");
+        return_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                return_btnActionPerformed(evt);
             }
         });
 
@@ -156,7 +156,7 @@ public class PatientPrescription extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(230, 230, 230))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(return_btn)
                         .addGap(244, 244, 244))))
         );
         layout.setVerticalGroup(
@@ -189,19 +189,19 @@ public class PatientPrescription extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(Medication))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(return_btn)
                 .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void return_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_return_btnActionPerformed
         // TODO add your handling code here:
         PatientMenu pm = new PatientMenu(PatientID);
         pm.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_return_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,7 +244,6 @@ public class PatientPrescription extends javax.swing.JFrame {
     private javax.swing.JLabel Medication;
     private javax.swing.JLabel Pname;
     private javax.swing.JLabel ReasonVisit;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -253,5 +252,6 @@ public class PatientPrescription extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel prescriptionID;
+    private javax.swing.JButton return_btn;
     // End of variables declaration//GEN-END:variables
 }

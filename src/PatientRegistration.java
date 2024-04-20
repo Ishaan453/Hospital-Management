@@ -37,7 +37,7 @@ public class PatientRegistration extends javax.swing.JFrame {
         LName = new javax.swing.JTextField();
         LAge = new javax.swing.JTextField();
         LBmi = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        register_btn = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         LDay = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -87,10 +87,10 @@ public class PatientRegistration extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Register");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        register_btn.setText("Register");
+        register_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                register_btnActionPerformed(evt);
             }
         });
 
@@ -174,7 +174,7 @@ public class PatientRegistration extends javax.swing.JFrame {
                                     .addComponent(LBmi)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(276, 276, 276)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(register_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(178, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(227, 227, 227)
@@ -225,7 +225,7 @@ public class PatientRegistration extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(LBmi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(register_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Error)
                 .addContainerGap(19, Short.MAX_VALUE))
@@ -246,7 +246,7 @@ public class PatientRegistration extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LBmiActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void register_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_register_btnActionPerformed
         // TODO add your handling code here:
         try{
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital_Management", "root", "!shuB0410");
@@ -308,7 +308,7 @@ public class PatientRegistration extends javax.swing.JFrame {
         catch (Exception e){
             System.out.println(e.toString());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_register_btnActionPerformed
 
     private void rdoMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoMaleActionPerformed
         // TODO add your handling code here:
@@ -358,7 +358,6 @@ public class PatientRegistration extends javax.swing.JFrame {
     private javax.swing.JTextField LName;
     private javax.swing.JTextField LYear;
     private javax.swing.ButtonGroup genderGrp;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -370,5 +369,6 @@ public class PatientRegistration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JRadioButton rdoFemale;
     private javax.swing.JRadioButton rdoMale;
+    private javax.swing.JButton register_btn;
     // End of variables declaration//GEN-END:variables
 }
